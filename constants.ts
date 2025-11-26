@@ -269,9 +269,9 @@ export const TRANSLATIONS: Record<LanguageCode, TranslationContent> = {
   },
   hi: {
     ui: {
-      title: "NICO-SHIELD जोखिम जांच",
-      subtitle: "स्व-मूल्यांकन के माध्यम से अपने जोखिम को पहचानें।",
-      getStarted: "शुरू करें",
+      title: "NICO-SHIELD Risk Checker",
+      subtitle: "Identify your risk through self-evaluation.",
+      getStarted: "GET STARTED",
       welcome: "मूल्यांकन में आपका स्वागत है",
       description: "यह एक इंटरैक्टिव टूल है जिसे तंबाकू के उपयोग से संबंधित आपके व्यक्तिगत जोखिम को समझने में मदद करने के लिए डिज़ाइन किया गया है।",
       whatYouGet: "आपको प्राप्त होगा:",
@@ -370,9 +370,9 @@ export const TRANSLATIONS: Record<LanguageCode, TranslationContent> = {
   },
   kn: {
     ui: {
-      title: "NICO-SHIELD ರಿಸ್ಕ್ ಚೆಕರ್",
-      subtitle: "ಸ್ವಯಂ-ಮೌಲ್ಯಮಾಪನದ ಮೂಲಕ ನಿಮ್ಮ ಅಪಾಯವನ್ನು ಗುರುತಿಸಿ.",
-      getStarted: "ಪ್ರಾರಂಭಿಸಿ",
+      title: "NICO-SHIELD Risk Checker",
+      subtitle: "Identify your risk through self-evaluation.",
+      getStarted: "GET STARTED",
       welcome: "ಮೌಲ್ಯಮಾಪನಕ್ಕೆ ಸುಸ್ವಾಗತ",
       description: "ತಂಬಾಕು ಬಳಕೆಗೆ ಸಂಬಂಧಿಸಿದ ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಅಪಾಯವನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಸಂವಾದಾತ್ಮಕ ಸಾಧನ.",
       whatYouGet: "ನೀವು ಪಡೆಯುತ್ತೀರಿ:",
@@ -471,9 +471,9 @@ export const TRANSLATIONS: Record<LanguageCode, TranslationContent> = {
   },
   ta: {
     ui: {
-      title: "NICO-SHIELD இடர்",
-      subtitle: "மதிப்பீடு மூலம் உங்கள் ஆபத்தை அடையாளம் காணவும்.",
-      getStarted: "தொடங்கவும்",
+      title: "NICO-SHIELD Risk Checker",
+      subtitle: "Identify your risk through self-evaluation.",
+      getStarted: "GET STARTED",
       welcome: "மதிப்பீட்டிற்கு வரவேற்கிறோம்",
       description: "புகையிலை பயன்பாடு தொடர்பான உங்கள் தனிப்பட்ட ஆபத்தைப் புரிந்துகொள்ள உதவும் ஊடாடும் கருவி.",
       whatYouGet: "நீங்கள் பெறுவீர்கள்:",
@@ -572,9 +572,9 @@ export const TRANSLATIONS: Record<LanguageCode, TranslationContent> = {
   },
   te: {
     ui: {
-      title: "NICO-SHIELD రిస్క్ చెకర్",
-      subtitle: "స్వీయ-మూల్యాంకనం ద్వారా మీ ప్రమాదాన్ని గుర్తించండి.",
-      getStarted: "ప్రారంభించండి",
+      title: "NICO-SHIELD Risk Checker",
+      subtitle: "Identify your risk through self-evaluation.",
+      getStarted: "GET STARTED",
       welcome: "మూల్యాంకనానికి స్వాగతం",
       description: "పొగాకు వాడకానికి సంబంధించిన మీ వ్యక్తిగత ప్రమాదాన్ని అర్థం చేసుకోవడానికి రూపొందించిన ఇంటరాక్టివ్ టూల్.",
       whatYouGet: "మీరు పొందుతారు:",
@@ -673,9 +673,9 @@ export const TRANSLATIONS: Record<LanguageCode, TranslationContent> = {
   },
   ml: {
     ui: {
-      title: "NICO-SHIELD റിസ്ക് ചെക്കർ",
-      subtitle: "സ്വയം വിലയിരുത്തലിലൂടെ നിങ്ങളുടെ അപകടസാധ്യത തിരിച്ചറിയുക.",
-      getStarted: "തുടങ്ങുക",
+      title: "NICO-SHIELD Risk Checker",
+      subtitle: "Identify your risk through self-evaluation.",
+      getStarted: "GET STARTED",
       welcome: "വിലയിരുത്തലിലേക്ക് സ്വാഗതം",
       description: "പുകയില ഉപയോഗവുമായി ബന്ധപ്പെട്ട നിങ്ങളുടെ വ്യക്തിപരമായ അപകടസാധ്യത മനസ്സിലാക്കാൻ സഹായിക്കുന്ന ഒരു ഉപകരണം.",
       whatYouGet: "നിങ്ങൾക്ക് ലഭിക്കുന്നത്:",
