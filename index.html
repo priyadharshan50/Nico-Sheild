@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NICO-SHIELD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-text': '#654321', // Dark Brown text from snippet
+              'brand-brown-dark': '#8B4513',
+              'brand-brown-light': '#A0522D',
+              'brand-gold': '#D2B48C',
+              'brand-gold-light': '#F4E4C1',
+              'brand-page': 'rgba(255, 255, 255, 0.95)', // Card background
+              'brand-orange': '#D2691E',
+              
+              // Specific Risk Colors
+              'risk-low': '#4CAF50',
+              'risk-moderate': '#FF9800',
+              'risk-high': '#F44336',
+            },
+            backgroundImage: {
+              'brand-gradient': 'linear-gradient(135deg, #8B7355 0%, #D2B48C 50%, #A0826D 100%)',
+              'btn-primary': 'linear-gradient(135deg, #8B4513, #A0522D)',
+              'btn-primary-hover': 'linear-gradient(135deg, #A0522D, #8B4513)',
+              'btn-orange': 'linear-gradient(135deg, #D2691E, #CD853F)',
+              'splash-gradient': 'linear-gradient(135deg, #6B4423 0%, #8B6914 50%, #654321 100%)',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+             animation: {
+              'fade-in': 'fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+              'fade-up': 'fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+              'scale-in': 'scaleIn 0.5s ease-out forwards',
+              'pulse-slow': 'pulse 3s infinite',
+              'dice-roll': 'diceRoll 0.6s ease-in-out infinite',
+              'float': 'float 3s ease-in-out infinite',
+              'shimmer': 'shimmer 2.5s linear infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scaleIn: {
+                '0%': { transform: 'scale(0.9)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              diceRoll: {
+                '0%': { transform: 'rotate(0deg)' },
+                '25%': { transform: 'rotate(90deg)' },
+                '50%': { transform: 'rotate(180deg)' },
+                '75%': { transform: 'rotate(270deg)' },
+                '100%': { transform: 'rotate(360deg)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-1000px 0' },
+                '100%': { backgroundPosition: '1000px 0' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="antialiased text-brand-text">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
