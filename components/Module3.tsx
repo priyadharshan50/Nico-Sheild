@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { NARRATIVE_STORIES } from '../constants';
 import { RiskCategory, Story } from '../types';
@@ -39,6 +40,7 @@ const StoryButton: React.FC<{ story: Story; onClick: () => void; index: number }
 const Module3: React.FC<{ onRestart: () => void }> = ({ onRestart }) => {
     const [activeCategory, setActiveCategory] = useState<RiskCategory | null>(null);
     const [selectedStory, setSelectedStory] = useState<Story | null>(null);
+    const [hasReadStory, setHasReadStory] = useState(false);
 
     const handleSelectCategory = (category: RiskCategory) => {
         setActiveCategory(category);
@@ -50,6 +52,7 @@ const Module3: React.FC<{ onRestart: () => void }> = ({ onRestart }) => {
 
     const handleSelectStory = (story: Story) => {
         setSelectedStory(story);
+        setHasReadStory(true);
     };
 
     return (
@@ -101,20 +104,22 @@ const Module3: React.FC<{ onRestart: () => void }> = ({ onRestart }) => {
                 </div>
             )}
              
-            <div className="mt-24 text-center">
-                 <div className="inline-block p-1 bg-gradient-to-r from-brand-brown-dark to-brand-orange rounded-full mb-8">
-                    <div className="bg-white rounded-full p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-brand-text"><path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm4.45 6.45a.75.75 0 0 0-1.06-1.06L6.75 14.44l-1.5-1.5a.75.75 0 1 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l6.022-7.857Z" clipRule="evenodd" /></svg>
-                    </div>
-                 </div>
-                <h3 className="text-2xl font-bold text-white drop-shadow-md mb-6">You have completed the NICO-SHIELD journey.</h3>
-                 <button 
-                    onClick={onRestart}
-                    className="bg-white text-brand-text font-bold py-4 px-12 text-lg rounded-full hover:bg-brand-gold-light transition-all duration-300 transform shadow-lg"
-                  >
-                    Start Over
-                  </button>
-            </div>
+            {hasReadStory && (
+                <div className="mt-24 text-center animate-fade-in">
+                     <div className="inline-block p-1 bg-gradient-to-r from-brand-brown-dark to-brand-orange rounded-full mb-8">
+                        <div className="bg-white rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-brand-text"><path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm4.45 6.45a.75.75 0 0 0-1.06-1.06L6.75 14.44l-1.5-1.5a.75.75 0 1 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l6.022-7.857Z" clipRule="evenodd" /></svg>
+                        </div>
+                     </div>
+                    <h3 className="text-2xl font-bold text-white drop-shadow-md mb-6">You have completed the NICO-SHIELD journey.</h3>
+                     <button 
+                        onClick={onRestart}
+                        className="bg-white text-brand-text font-bold py-4 px-12 text-lg rounded-full hover:bg-brand-gold-light transition-all duration-300 transform shadow-lg"
+                      >
+                        Start Over
+                      </button>
+                </div>
+            )}
 
             <Modal isOpen={!!selectedStory} onClose={() => setSelectedStory(null)}>
                 {selectedStory && (
